@@ -135,4 +135,4 @@ for ach in achievements:
 # Call to Action
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.write("Let's connect!")
-st.write("Connect with me on LinkedIn: [Kunal Patil](https://www.linkedin.com/in/kunal-patil-
+st.write("Connect with me on LinkedIn: [Kunal Patil](https://https://www.linkedin.com/in/kunal-patil-35475a167/)")
