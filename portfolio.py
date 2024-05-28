@@ -13,6 +13,43 @@ st.markdown(
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        color: #ffffff;  /* Set text color to white */
+    }
+    .hero {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .section {
+        padding: 2rem 0;
+    }
+    .section-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    .contact-info {
+        margin-bottom: 1rem;
+    }
+    .skill-icon {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+    }
+    .project-item {
+        margin-left: 2rem;
+    }
+    .education-item {
+        margin-left: 1rem;
+    }
+    .achievement-item {
+        margin-left: 2rem;
     }
     </style>
     """,
@@ -27,31 +64,32 @@ st.sidebar.write("Email ID: pkunal842@gmail.com")
 
 # Hero Section
 st.markdown("<div class='hero'>", unsafe_allow_html=True)
-st.title("Welcome to My Portfolio")
-st.write("Data Scientist | Machine Learning Enthusiast")
+st.markdown("<div class='hero-title'>Welcome to My Portfolio</div>", unsafe_allow_html=True)
+st.markdown("<div class='hero-subtitle'>Data Scientist | Machine Learning Enthusiast</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Career Summary
-st.markdown("<hr/>", unsafe_allow_html=True)
-st.header("Career Summary")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Career Summary</div>", unsafe_allow_html=True)
 st.write(
     "Seeking a role in data science/analysis to leverage statistical and machine learning skills for impactful business decisions. Eager to contribute expertise in fostering organizational growth, paired with strong communication, teamwork, and leadership abilities."
 )
 
 # Skills Section with Icons
-st.header("Skills")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Skills</div>", unsafe_allow_html=True)
 skills = [
-    {"icon": ":computer:", "name": "Programming Languages: Python, SQL"},
-    {"icon": ":abacus:", "name": "Machine Learning: Supervised/Unsupervised"},
-    {"icon": ":chart_with_upwards_trend:", "name": "Data Visualization: Seaborn, Matplotlib"},
-    {"icon": ":speaking_head:", "name": "Communication & Teamwork"},
+    {"icon": "💻", "name": "Programming Languages: Python, SQL"},
+    {"icon": "🧮", "name": "Machine Learning: Supervised/Unsupervised"},
+    {"icon": "📈", "name": "Data Visualization: Seaborn, Matplotlib"},
+    {"icon": "🗣️", "name": "Communication & Teamwork"},
 ]
-cols = st.columns(len(skills))
-for i, col in enumerate(cols):
-    col.markdown(f"{skills[i]['icon']} {skills[i]['name']}")
+for skill in skills:
+    st.write(f"<span class='skill-icon'>{skill['icon']}</span> {skill['name']}", unsafe_allow_html=True)
 
 # Professional Experience
-st.header("Professional Experience")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Professional Experience</div>", unsafe_allow_html=True)
 st.write("AI ML Intern")
 st.write("Webmobi360.co | Pune | Dec.2023-Present")
 st.markdown(
@@ -61,19 +99,19 @@ st.markdown(
 )
 
 # Academic Projects
-st.header("Academic Projects")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Academic Projects</div>", unsafe_allow_html=True)
 projects = [
     "Medicine Recommendation System using Machine Learning",
     "Online Shopping Process Analytics",
     "Credit Card Defaulter Prediction using Machine Learning (Classification)",
 ]
 for project in projects:
-    st.write(f"- {project}")
+    st.write(f"<div class='project-item'>- {project}</div>", unsafe_allow_html=True)
 
 # Education
-st.header("Education")
-st.write("Course | Institution | Year")
-st.write("---|---|---")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Education</div>", unsafe_allow_html=True)
 degrees = [
     ("Post Graduate Programme – Data Science and Engineering", "Great Lakes Institute of Management", "2023"),
     ("Bachelor Of Engineering (Mechanical Engg.)", "Sandip Institute of Engineering and Management, Nashik", "2019"),
@@ -81,18 +119,20 @@ degrees = [
     ("10th Std", "Sane Guruji Vidya Mandir, Amalner", "2013"),
 ]
 for deg in degrees:
-    st.write(f"- {deg[0]} | {deg[1]} | {deg[2]}")
+    st.write(f"<div class='education-item'>- {deg[0]} | {deg[1]} | {deg[2]}</div>", unsafe_allow_html=True)
 
 # Other Achievements
-st.header("Other Certificates/Achievements")
+st.markdown("<div class='section'>", unsafe_allow_html=True)
+st.markdown("<div class='section-header'>Other Certificates/Achievements</div>", unsafe_allow_html=True)
 achievements = [
     "Introduction to R",
     "Fundamentals of Generative AI",
     "Basics of Power BI",
 ]
 for ach in achievements:
-    st.write(f"- {ach}")
+    st.write(f"<div class='achievement-item'>- {ach}</div>", unsafe_allow_html=True)
 
 # Call to Action
+st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.write("Let's connect!")
-st.write("Connect with me on LinkedIn: https://www.linkedin.com/in/kunal-patil-35475a167/")
+st.write("Connect with me on LinkedIn: [Kunal Patil](https://www.linkedin.com/in/kunal-patil-35475a167/)")
