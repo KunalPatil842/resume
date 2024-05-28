@@ -95,4 +95,4 @@ for ach in achievements:
 
 # Call to Action
 st.write("Let's connect!")
-st.write("Connect with me on LinkedIn: [link to your LinkedIn profile]")
+st.write("Connect with me on LinkedIn: https://www.linkedin.com/in/kunal-patil-35475a167/")
