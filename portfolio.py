@@ -10,7 +10,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url("background.jpg");
+        background-image: url("photo_6230778330290962227_y.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
