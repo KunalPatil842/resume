@@ -102,12 +102,12 @@ st.markdown(
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.markdown("<div class='section-header'>Academic Projects</div>", unsafe_allow_html=True)
 projects = [
-    "Medicine Recommendation System using Machine Learning",
-    "Online Shopping Process Analytics",
-    "Credit Card Defaulter Prediction using Machine Learning (Classification)",
+    {"title": "Medicine Recommendation System using Machine Learning", "description": "Developed a machine learning model to recommend medicines based on patient symptoms and medical history."},
+    {"title": "Online Shopping Process Analytics", "description": "Analyzed user behavior data to optimize the online shopping process and improve user experience."},
+    {"title": "Credit Card Defaulter Prediction using Machine Learning (Classification)", "description": "Built a classification model to predict credit card defaulters based on historical transaction data."},
 ]
 for project in projects:
-    st.write(f"<div class='project-item'>- {project}</div>", unsafe_allow_html=True)
+    st.write(f"<div class='project-item'><strong>{project['title']}</strong>: {project['description']}</div>", unsafe_allow_html=True)
 
 # Education
 st.markdown("<div class='section'>", unsafe_allow_html=True)
@@ -135,4 +135,4 @@ for ach in achievements:
 # Call to Action
 st.markdown("<div class='section'>", unsafe_allow_html=True)
 st.write("Let's connect!")
-st.write("Connect with me on LinkedIn: [Kunal Patil](https://www.linkedin.com/in/kunal-patil-35475a167/)")
+st.write("Connect with me on LinkedIn: [Kunal Patil](https://www.linkedin.com/in/kunal-patil-
