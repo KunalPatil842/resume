@@ -27,8 +27,8 @@ st.markdown(
 )
 
 # Load your profile picture and convert it to a round shape
-def make_profile_pic_round(img_path):
-    img = Image.open(img_path)
+def make_profile_pic_round(photo_6230778330290962227_y.jpg):
+    img = Image.open(photo_6230778330290962227_y.jpg)
     width, height = img.size
     radius = min(width, height) // 2
     mask = Image.new('L', (radius * 2, radius * 2), 0)
@@ -40,7 +40,7 @@ def make_profile_pic_round(img_path):
 
 # Contact Information with profile picture
 with st.sidebar:
-    st.image(make_profile_pic_round("profile_pic.jpg"), class_="profile-pic")
+    st.image(make_profile_pic_round("photo_6230778330290962227_y.jpg"), class_="profile-pic")
     st.sidebar.write("Name: Kunal Jagdish Patil")
     st.sidebar.write("Contact No.: 9881679381")
     st.sidebar.write("Email ID: pkunal842@gmail.com")
@@ -49,19 +49,7 @@ st.set_page_config(
     page_title="Kunal Jagdish Patil's Portfolio",
     page_icon=":chart_with_upwards_trend:",
 )
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url("background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+
 
 # Contact Information
 st.sidebar.header("Contact")
