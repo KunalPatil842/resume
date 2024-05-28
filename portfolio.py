@@ -1,5 +1,49 @@
 import streamlit as st
+from PIL import Image
 
+# Set page title and background image
+st.set_page_config(
+    page_title="Kunal Jagdish Patil's Portfolio",
+    page_icon=":chart_with_upwards_trend:",
+)
+st.markdown(
+    """
+    <style>
+    body {
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Load your profile picture and convert it to a round shape
+def make_profile_pic_round(img_path):
+    img = Image.open(img_path)
+    width, height = img.size
+    radius = min(width, height) // 2
+    mask = Image.new('L', (radius * 2, radius * 2), 0)
+    mask_draw = ImageDraw.Draw(mask)
+    mask_draw.ellipse((0, 0, radius * 2, radius * 2), fill=255)
+    img = img.resize((radius * 2, radius * 2))
+    img.putalpha(mask)
+    return img
+
+# Contact Information with profile picture
+with st.sidebar:
+    st.image(make_profile_pic_round("profile_pic.jpg"), class_="profile-pic")
+    st.sidebar.write("Name: Kunal Jagdish Patil")
+    st.sidebar.write("Contact No.: 9881679381")
+    st.sidebar.write("Email ID: pkunal842@gmail.com")
 # Set page title and background image
 st.set_page_config(
     page_title="Kunal Jagdish Patil's Portfolio",
