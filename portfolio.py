@@ -27,8 +27,8 @@ st.markdown(
 )
 
 # Load your profile picture and convert it to a round shape
-def make_profile_pic_round(photo_6230778330290962227_y.jpg):
-    img = Image.open(photo_6230778330290962227_y.jpg)
+def make_profile_pic_round("photo_6230778330290962227_y.jpg"):
+    img = Image.open("photo_6230778330290962227_y.jpg")
     width, height = img.size
     radius = min(width, height) // 2
     mask = Image.new('L', (radius * 2, radius * 2), 0)
